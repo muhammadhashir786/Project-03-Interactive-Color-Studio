@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chroma Studio - Live Color Changer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Box -->
+    <div class="container">
+      <!-- Header -->
+      <header>
+        <h1>Interactive Color Studio</h1>
+        <p>
+          Switch canvas tones with curated presets or real-time custom shades.
+        </p>
+      </header>
+
+      <!-- Colors Buttons Section -->
+      <div class="btns">
+        <!-- Individual Buttons Box -->
+        <div class="colors">
+          <button class="btn-1" onclick="changeColor('red')">Red</button>
+          <button class="btn-2" onclick="changeColor('blue')">Blue</button>
+          <button class="btn-3" onclick="changeColor('greenyellow')">
+            Green
+          </button>
+          <button class="btn-4" onclick="changeColor('orange')">Orange</button>
+        </div>
+
+        <!-- Custom Color Picker Box -->
+        <label class="custom-picker" for="colorInput">
+          <span class="picker-label">Custom:</span>
+
+          <!-- Show Selected Color HEX Code -->
+          <span class="hex-code" id="hexCode">#feebff</span>
+
+          <div class="picker-wrapper">
+            <input
+              type="color"
+              id="colorInput"
+              value="#feebff"
+              oninput="liveColorPicker(this.value)"
+            />
+            <span class="picker-btn">Pick Color 🎨</span>
+          </div>
+        </label>
+
+        <!-- Reset Button Box -->
+        <div class="reset">
+          <button class="btn-5" id="reset" onclick="resetColor()">Reset</button>
+        </div>
+
+        <!-- Footer -->
+        <p class="footer-note">
+          Made with <span aria-label="love"> ♥ </span> and JavaScript
+        </p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

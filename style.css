@@ -1,0 +1,513 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  /* background-color: #f3f4f8; */
+  background-color: #feebff;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px;
+  transition: background-color 1s ease;
+}
+
+.container {
+  width: 100%;
+  max-width: 620px;
+  border-radius: 20px;
+  background-color: white;
+  padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  box-shadow: 0 12px 35px rgba(123, 47, 247, 0.12);
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-align: center;
+  background: linear-gradient(135deg, #f200ff, #7b2ff7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  width: 100%;
+  max-width: 480px;
+  color: #5e5873;
+  text-align: center;
+  margin: 0px;
+  /* font-size: 15px; */
+  font-size: 14.5px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+
+/* Buttons */
+
+button {
+  background-color: black;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 5px;
+  border: none;
+}
+
+.colors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.reset {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns {
+  width: 100%;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-1,
+.btn-2,
+.btn-3,
+.btn-4,
+.btn-5 {
+  width: 120px;
+  height: 45px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 14px;
+  user-select: none;
+  cursor: pointer;
+
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.3s ease,
+    color 0.2s ease;
+}
+
+.btn-1:hover:after,
+.btn-2:hover:after,
+.btn-3:hover:after,
+.btn-4:hover:after {
+  transform: translate(-50%, -50%) scale(13);
+  opacity: 1;
+  transition-duration: 0.5s;
+}
+
+/* Individual Buttons after */
+
+.btn-1:after {
+  background-color: red;
+}
+
+.btn-2:after {
+  background-color: blue;
+}
+
+.btn-3:after {
+  background-color: greenyellow;
+}
+
+.btn-4:after {
+  background-color: orange;
+}
+
+.btn-1:after,
+.btn-2:after,
+.btn-3:after,
+.btn-4:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition-duration: 0.5s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+/* individual buttons on hover */
+
+.btn-1:hover {
+  box-shadow:
+    0px 0px 5px red,
+    0px 0px 10px red,
+    0px 0px 30px red;
+}
+
+.btn-2:hover {
+  box-shadow:
+    0px 0px 5px blue,
+    0px 0px 10px blue,
+    0px 0px 30px blue;
+}
+
+.btn-3:hover {
+  color: #000;
+  box-shadow:
+    0px 0px 5px greenyellow,
+    0px 0px 10px greenyellow,
+    0px 0px 30px greenyellow;
+}
+
+.btn-4:hover {
+  color: #000;
+  box-shadow:
+    0px 0px 5px orange,
+    0px 0px 10px orange,
+    0px 0px 30px orange;
+}
+
+/* Up animation when buttons hover */
+
+.btn-1:hover,
+.btn-2:hover,
+.btn-3:hover,
+.btn-4:hover {
+  transform: translateY(-2px);
+}
+
+/* Down animation when buttons active */
+
+.btn-1:active,
+.btn-2:active,
+.btn-3:active,
+.btn-4:active {
+  transform: translateY(1px);
+}
+
+/* Reset Button */
+
+#reset {
+  width: 200px;
+  text-align: center;
+
+  background: linear-gradient(90deg, #ff00c8, #7b2ff7, #00e1ff); /* important */
+  background-size: 200% auto; /* important */
+
+  color: white;
+
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  transition:
+    background-position 0.4s ease,
+    box-shadow 0.3s ease,
+    transform 0.15s ease; /* important */
+}
+
+#reset:hover {
+  background-position: right center; /* important */
+  box-shadow: 0 0 25px rgba(0, 225, 255, 0.7);
+  transform: translateY(-2px); /* important */
+}
+
+#reset:active {
+  transform: translateY(1px);
+}
+
+/* Custom Color Picker Section */
+
+.custom-picker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 525px;
+  background-color: #faf7fc;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ebdcf5;
+  cursor: pointer;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  /* box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.04); */
+}
+
+.custom-picker:hover {
+  border-color: #f200ff;
+  box-shadow: 0 4px 15px rgba(242, 0, 255, 0.12);
+}
+
+.picker-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555064;
+  letter-spacing: 0.3px;
+  margin-left: 6px;
+}
+
+.picker-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.picker-wrapper input[type="color"] {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  left: 0;
+  top: 0;
+}
+
+/* Show Live Color Code */
+
+.hex-code {
+  font-size: 13.5px;
+  font-weight: 600;
+  /* color: #635b75; */
+  color: #7b2ff7;
+  letter-spacing: 0.8px;
+  user-select: none;
+}
+
+.picker-btn {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 500;
+  border: none;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+  transition:
+    /* color 0.25s ease, */
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.picker-wrapper:hover .picker-btn {
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 15px rgba(242, 0, 255, 0.25); /* Yeh purple/pink shadow add karein */
+}
+
+/* Footer */
+
+.footer-note {
+  width: 100%;
+  color: #837d94;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 12px 0 0 0;
+  letter-spacing: 0.3px;
+}
+
+.footer-note span {
+  color: #f43f5e;
+}
+
+/* Responsive */
+
+/* 600 and Below */
+
+@media (max-width: 600px) {
+  .container {
+    padding: 30px 20px;
+    gap: 30px;
+  }
+
+  /* 4 buttons clean 2x2 grid mein aayenge taake buttons squeeze na hon */
+  .colors {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: 100%;
+    gap: 12px;
+  }
+
+  .btn-1,
+  .btn-2,
+  .btn-3,
+  .btn-4 {
+    width: 100%;
+  }
+
+  /* Custom Picker aur Reset dono container ke andar matched full width rahenge */
+  .custom-picker {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .reset {
+    width: 100%;
+  }
+
+  #reset {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* 0 - 400px */
+
+@media (max-width: 450px) {
+  body {
+    padding: 15px 10px;
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding: 22px 14px;
+    gap: 22px;
+    width: 100%;
+  }
+
+  header {
+    gap: 6px;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    line-height: 1.25;
+  }
+
+  p {
+    font-size: 13.5px;
+    padding: 0 4px;
+    font-weight: 500;
+  }
+
+  .btns {
+    width: 100%;
+    gap: 15px;
+    margin-bottom: 8px;
+  }
+
+  .colors {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 9px;
+  }
+
+  .btn-1,
+  .btn-2,
+  .btn-3,
+  .btn-4 {
+    width: 100%;
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .custom-picker {
+    width: 100%;
+    max-width: 100%;
+    padding: 7px 12px;
+  }
+
+  .picker-label {
+    font-size: 12.5px;
+  }
+
+  .picker-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .reset {
+    width: 100%;
+  }
+
+  #reset {
+    width: 100%;
+    max-width: 100%;
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .footer-note {
+    font-size: 0.78rem;
+    margin: 8px 0 0 0;
+  }
+
+  /* Mobile Circle Fix: Base size match karo aur scale smooth rakho */
+  .btn-1:after,
+  .btn-2:after,
+  .btn-3:after,
+  .btn-4:after {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Mobile par end tak smoothly spread hone ke liye */
+  .btn-1:hover:after,
+  .btn-2:hover:after,
+  .btn-3:hover:after,
+  .btn-4:hover:after,
+  .btn-1:active:after,
+  .btn-2:active:after,
+  .btn-3:active:after,
+  .btn-4:active:after {
+    transform: translate(-50%, -50%) scale(9);
+    opacity: 1;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+  }
+}
+
+@media (max-width: 385px) {
+  p {
+    padding: 0 20px;
+  }
+}
