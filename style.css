@@ -135,8 +135,6 @@ button {
   transition-duration: 0.5s;
 }
 
-/* Individual Buttons after */
-
 .btn-1:after {
   background-color: red;
 }
@@ -336,7 +334,7 @@ button {
 
 .picker-wrapper:hover .picker-btn {
   background-color: #1a1a1a;
-  box-shadow: 0 4px 15px rgba(242, 0, 255, 0.25); /* Yeh purple/pink shadow add karein */
+  box-shadow: 0 4px 15px rgba(242, 0, 255, 0.25);
 }
 
 /* Footer */
@@ -365,7 +363,6 @@ button {
     gap: 30px;
   }
 
-  /* 4 buttons clean 2x2 grid mein aayenge taake buttons squeeze na hon */
   .colors {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -381,7 +378,6 @@ button {
     width: 100%;
   }
 
-  /* Custom Picker aur Reset dono container ke andar matched full width rahenge */
   .custom-picker {
     width: 100%;
     max-width: 100%;
@@ -481,7 +477,6 @@ button {
     margin: 8px 0 0 0;
   }
 
-  /* Mobile Circle Fix: Base size match karo aur scale smooth rakho */
   .btn-1:after,
   .btn-2:after,
   .btn-3:after,
@@ -490,7 +485,6 @@ button {
     height: 44px;
   }
 
-  /* Mobile par end tak smoothly spread hone ke liye */
   .btn-1:hover:after,
   .btn-2:hover:after,
   .btn-3:hover:after,
