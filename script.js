@@ -65,21 +65,3 @@ window.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
-
-/** 
-{   // 2nd method to check any color saved in local storage:
-
-    // Sabse Seedha Aur Aasan Tareeqa
-    const savedColor = localStorage.getItem("selectedColor");
-
-    if (savedColor) {
-        document.body.style.backgroundColor = savedColor;
-        document.getElementById("hexCode").textContent = savedColor;
-
-        // Sirf color picker ko sync karne ke liye
-        if (savedColor.startsWith("#")) {
-            document.getElementById("colorInput").value = savedColor;
-        }
-    }
-}
-*/
