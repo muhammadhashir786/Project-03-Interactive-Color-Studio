@@ -310,7 +310,8 @@ button {
   /* color: #635b75; */
   color: #7b2ff7;
   letter-spacing: 0.8px;
-  user-select: none;
+  /* user-select: all; */
+  cursor: auto;
 }
 
 .picker-btn {
